@@ -178,6 +178,12 @@ Estimated load capacity: **10k–50k concurrent users** with current setup.
 - Automate environment injection per target (backend/frontend)
 - Use Nx to manage consistent build pipelines and versioning
 
+#### 🧪 Testing
+- Add **unit tests** for message, user, and room services using Jest.
+- Add **integration tests** for Kafka → Redis → GraphQL flow.
+- Add **end-to-end tests** for message sending and receiving via frontend (Cypress or Playwright).
+- Implement **CI pipeline** to automatically run test suites on every PR.
+
 ### 🧭 Summary
 This system is a strong **MVP-to-Production bridge**. With Redis Streams + Kafka optimization and proper gateway design, it can scale to:
 - **50,000 active users** (current setup)
