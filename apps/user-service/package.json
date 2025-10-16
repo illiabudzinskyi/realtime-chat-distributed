@@ -1,0 +1,50 @@
+{
+  "name": "user-service",
+  "version": "0.0.1",
+  "private": true,
+  "type": "commonjs",
+  "main": "dist/apps/user-service/main.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "nx:serve": "nx serve user-service",
+    "nx:build": "nx build user-service"
+  },
+  "dependencies": {
+    "@chromaspace/shared": "*"
+  },
+  "nx": {
+    "tags": ["type:app"],
+    "targets": {
+      "build": {
+        "executor": "@nx/js:tsc",
+        "dependsOn": ["@chromaspace/shared:build"],
+        "options": {
+          "main": "apps/user-service/main.ts",
+          "tsConfig": "apps/user-service/tsconfig.json",
+          "outputPath": "dist/apps/user-service",
+          "rootDir": "apps/user-service/src",
+          "assets": ["apps/user-service/package.json"],
+          "inspect": false
+        },
+        "outputs": ["{options.outputPath}"]
+      },
+      "serve": {
+        "executor": "@nx/js:node",
+        "options": {
+          "buildTarget": "user-service:build",
+          "watch": true,
+          "inspect": false
+        },
+        "dependsOn": ["@chromaspace/shared:build"]
+      }
+    }
+  }
+}

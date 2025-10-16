@@ -1,0 +1,36 @@
+{
+  "name": "@chromaspace/shared",
+  "version": "0.0.1",
+  "private": true,
+  "type": "commonjs",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "nx": {
+    "tags": ["type:lib"],
+    "targets": {
+      "build": {
+        "executor": "@nx/js:tsc",
+        "options": {
+          "main": "libs/shared/src/index.ts",
+          "tsConfig": "libs/shared/tsconfig.lib.json",
+          "outputPath": "dist/libs/shared",
+          "rootDir": "libs/shared/src",
+          "assets": ["libs/shared/package.json"],
+          "inspect": false
+        },
+        "outputs": ["{options.outputPath}"]
+      },
+      "serve": {
+        "executor": "@nx/js:node",
+        "options": {
+          "buildTarget": "@chromaspace/shared:build",
+          "watch": true,
+          "inspect": false
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "frontend",
+  "version": "0.0.1",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+    "nx": {
+    "tags": ["type:app"],
+    "targets": {
+      "build": {
+        "executor": "@nx/vite:build",
+        "dependsOn": ["@chromaspace/shared:build"],
+        "outputs": ["{options.outputPath}"],
+        "options": {
+          "configFile": "apps/frontend/vite.config.ts",
+          "outputPath": "dist/apps/frontend"
+        }
+      },
+      "serve": {
+        "executor": "@nx/vite:dev-server",
+        "dependsOn": ["@chromaspace/shared:build"],
+        "options": {
+          "buildTarget": "frontend:build"
+        }
+      }
+    }
+  }
+}

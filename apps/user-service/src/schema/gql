@@ -1,0 +1,14 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: ID!
+  username: String!
+  avatarUrl: String
+  isOnline: Boolean!
+}
+
+type Query {
+  users: [User!]!
+}

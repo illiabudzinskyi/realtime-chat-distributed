@@ -1,0 +1,36 @@
+# 🔹 Node stuff
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+.env
+.env.*
+
+# 🔹 Build artifacts
+dist
+tmp
+.cache
+.out
+coverage
+
+# 🔹 Git / IDE
+.git
+.gitignore
+.idea
+.vscode
+.DS_Store
+
+# 🔹 Docker
+Dockerfile*
+docker-compose.yml
+
+# 🔹 OS/system files
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.log
+*.tmp
+
+# 🔹 Nx
+.nx

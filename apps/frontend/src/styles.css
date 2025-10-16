@@ -1,0 +1,207 @@
+/* You can add global styles to this file, and also import other style files */
+ css :root{
+     --bg:#e6eef7;
+     --sidebar:#f8f9fb;
+     --accent:#0088cc;
+     --muted:#7a8a93 
+}
+ *{
+    box-sizing:border-box
+}
+ body,html,#root{
+    height:100%;
+    margin:0;
+    font-family:Inter, system-ui, sans-serif;
+    background:var(--bg)
+}
+ .app{
+    display:flex;
+    height:100vh
+}
+ .sidebar{
+    width:320px;
+    background:var(--sidebar);
+    border-right:1px solid #e0e6ea;
+    padding:16px;
+    display:flex;
+    flex-direction:column
+}
+ .brand{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-weight:700;
+    color:var(--accent);
+    font-size:20px;
+}
+ .chat-list{
+    overflow:auto
+}
+ .chat-item{
+    padding:10px;
+    border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    cursor:pointer
+}
+ .chat-item.active{
+    background:#e3f2fb
+}
+ .chat-title{
+    font-weight:600
+}
+ .chat-last{
+    color:var(--muted);
+    font-size:13px
+}
+ .chat-time{
+    font-size:12px;
+    color:var(--muted);
+    align-self:flex-end
+}
+ .main{
+    flex:1;
+    display:flex;
+    flex-direction:column
+}
+ .chat-window{
+    display:flex;
+    flex-direction:column;
+    height:100%
+}
+ .chat-header{
+    padding:12px;
+    border-bottom:1px solid #e6eef7;
+    font-weight:600
+}
+ .messages{
+    flex:1;
+    overflow:auto;
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    gap:8px
+}
+ .message{
+    max-width:70%;
+    padding:8px;
+    border-radius:8px
+}
+ .message.mine{
+    align-self:flex-end;
+    background:#daf8e3
+}
+ .message.other{
+    align-self:flex-start;
+    background:#fff
+}
+ .msg-user{
+    font-weight:600;
+    font-size:13px
+}
+ .msg-text{
+    margin-top:4px
+}
+ .msg-time{
+    font-size:11px;
+    color:var(--muted);
+    margin-top:6px
+}
+
+
+ .send-form{
+    display:flex;
+    gap:8px;
+    padding:12px;
+    border-top:1px solid #e6eef7
+}
+ .send-form input{
+    flex:1;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #dbe7ee
+}
+ .send-form button{
+    background-color: #d9f8e3;
+    padding:10px 14px;
+    border-radius:8px;
+    border:none;
+    color:black;
+    cursor: pointer;
+}
+
+.send-form button:hover{
+    background-color: #72ffa4;
+}
+
+.send-form button.disabled{
+    background-color: grey;
+}
+
+ .create-form{
+    display:flex;
+    gap:8px;
+    padding:12px 0;
+    border-bottom:1px solid #e6eef7;
+    margin-bottom: 10px;
+}
+ .create-form input{
+    flex:1;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #dbe7ee
+}
+ .create-form button{
+    background-color: #d9f8e3;
+    transition: all 0.2s;
+    padding:10px 14px;
+    border-radius:8px;
+    border:none;
+    color:black;
+    cursor: pointer;
+}
+
+.create-form button:hover{
+    background-color: #72ffa4;
+}
+
+.create-form button.disabled{
+    background-color: grey;
+}
+
+ .logout_btn{
+    background-color: #f8d9d9;
+    width: 100%;
+    transition: all 0.2s;
+    padding:10px 14px;
+    border-radius:8px;
+    border:none;
+    color:black;
+    cursor: pointer;
+}
+
+.logout_btn:hover{
+    background-color: #ff9a9a;
+}
+
+.logout_btn.disabled{
+    background-color: grey;
+}
+
+ .login{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh
+}
+ .login-form{
+    display:flex;
+    gap:8px
+}
+ .center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100%
+}
