@@ -93,7 +93,7 @@ All service replicas run behind the same hostname/port but are distributed via T
 ### Run Locally via Docker
 ```bash
 # 1. Clone repository
-git clone https://github.com/your-username/scalable-chat.git
+git clone https://github.com/IllyaAvramenko/chromaspace
 cd scalable-chat
 
 # 2. Install dependencies for all services
