@@ -66,6 +66,8 @@ npx nx build @chromaspace/shared
 - All other services (User, Chat, Shared) also read from `.env.local` during development.
 - Each service supports hot reload with `nx serve`.
 
+**Example `.env.local` for all services you can find in env.template file**
+
 For Docker builds, `.env.docker` is automatically injected at build time.  
 This separation allows consistent local vs. containerized environments.
 
